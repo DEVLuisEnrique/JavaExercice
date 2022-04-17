@@ -8,21 +8,37 @@ public class Main {
 		// TODO Auto-generated method stub
 
 		int numeros[] = new int[100]; //arreglo que permite almacenar 100 numeros
-		int aleatorio = (int)(Math.random()*100);
-		int numMayor=0;
 		
-		for (int i = 1; i < numeros.length;i++) {//llenamos el arreglos con numeros random del 0-100
+		int numMayor,numMenor;
+		
+		
+		
+		for (int i = 0; i < numeros.length;i++) {//llenamos el arreglos con numeros random del 0-100
 			
-			numeros[i] = (int)(Math.random()*100);
+			numeros[i] = 1 + (int)(Math.random()*100);
 			
 		}
 		
-		for(int i = 1;i < numeros.length;i++) {//imprimir arreglo
+		for(int i = 0;i < numeros.length;i++) {//imprimir arreglo
 			System.out.print(numeros[i]+", ");
 		}
+		System.out.println();
 		
-		
-	
+		//obtener el numero mayor del arreglo
+		numMayor = numMenor =numeros[0];
+		for(int n = 0; n < numeros.length;n++) 
+			{
+				if(numeros[n] > numMayor) 
+					{
+						numMayor = numeros[n];
+					}
+				if(numeros[n] < numMenor)
+					{
+						numMenor = numeros[n];
+					}
+			}
+		System.out.println("El numero mayor es: "+numMayor);
+		System.out.println("El numero menor es: "+numMenor);
 		
 		
 	}
