@@ -40,6 +40,9 @@ public class Main {
 		System.out.println("El numero mayor es: "+numMayor);
 		System.out.println("El numero menor es: "+numMenor);
 		
+		NumerosPares clasePares = new NumerosPares();
+		clasePares.numPares(numeros);
+		
 		
 	}
 
